@@ -1,25 +1,75 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Javascript</title>
-    <script>
-        // alert("Aur bhai")
-    </script>
-    <script src="script.js"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Stream Page with Default 720p</title>
+<style>
+  body { text-align:center; margin: 0; padding: 0; font-family: Arial, sans-serif; }
+  .video-container { margin: 20px auto; }
+  .control-bar { margin-top: 10px; }
+  .telegram-link { display: inline-block; margin-top: 20px; background-color: #0088cc; color: #fff; padding: 10px 15px; border-radius: 5px; text-decoration: none; }
+  .telegram-logo { width: 24px; vertical-align: middle; margin-right: 8px; }
+  .live-button { padding: 10px 15px; background-color: red; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+</style>
 </head>
 <body>
-    <h1>Live</h1>
-    <script>
-        alert("Join the channel:)")
-    </script>
-    <iframe src="https://crichdstreaming.xyz/embed2.php?id=starsp3" width="90%" height="540" scrolling="no"  webkit allowfullscreen="true"
-    marginheight="0" 
-    mozallowfullscreen="true"
-    marginwidth="0"
-     frameborder="0"></iframe>
+  <h2>Live Stream</h2>
+  <video id="videoElement" controls style="width:60%; max-width:640px;"></video>
+  <div class="video-container">
+    <select id="qualitySelector">
+      <option value="https://prod-sports-hin-gm.jiocinema.com/hls/live/2100329/hd_akamai_androidmob_avc_hin_ipl_s2_m2140424/master_720p.m3u8">240P</option>
+      <option value="https://prod-sports-hin-gm.jiocinema.com/hls/live/2100329/hd_akamai_iosmob_avc_hin_ipl_s2_m2140424/master_360p.m3u8">360P</option>
+      <option value="https://prod-sports-hin-gm.jiocinema.com/hls/live/2100329/hd_akamai_iosmob_avc_hin_ipl_s2_m2140424/master_480p.m3u8">480P</option>
+      <option value="https://prod-sports-hin-gm.jiocinema.com/hls/live/2100329/hd_akamai_iosmob_avc_hin_ipl_s2_m2140424/master_720p.m3u8" selected>720P</option>
+      <option value="https://prod-sports-hin-gm.jiocinema.com/hls/live/2100329/hd_akamai_iosmob_avc_hin_ipl_s2_m2140424/master_1080p.m3u8">1080P</option>
+      <option value="https://prod-ent-live-gm.jiocinema.com/hls/live/2100328/uhd_akamai_ctv_avc_hin_ipl_s2_m2140424/master.m3u8">4K</option>
+    </select>
+    <button id="liveButton" class="live-button">GO LIVE</button>
+  </div>
+  <a href="https://t.me/movieswebseries_group" class="telegram-link" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="Telegram Logo" class="telegram-logo">Join us on Telegram
+  </a>
 
-     
+<script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    var video = document.getElementById('videoElement');
+    var qualitySelector = document.getElementById('qualitySelector');
+    var liveButton = document.getElementById('liveButton');
+    var sources = {
+      '240P': 'https://prod-sports-hin-gm.jiocinema.com/hls/live/2100329/hd_akamai_androidmob_avc_hin_ipl_s2_m2140424/master_720p.m3u8',
+      '360P': 'https://prod-sports-hin-gm.jiocinema.com/hls/live/2100329/hd_akamai_iosmob_avc_hin_ipl_s2_m2140424/master_360p.m3u8',
+      '480P': 'https://prod-sports-hin-gm.jiocinema.com/hls/live/2100329/hd_akamai_iosmob_avc_hin_ipl_s2_m2140424/master_480p.m3u8',
+      '720P': 'https://prod-sports-hin-gm.jiocinema.com/hls/live/2100329/hd_akamai_iosmob_avc_hin_ipl_s2_m2140424/master_720p.m3u8',
+      '1080P': 'https://prod-sports-hin-gm.jiocinema.com/hls/live/2100329/hd_akamai_iosmob_avc_hin_ipl_s2_m2140424/master_1080p.m3u8',
+      '4K': 'https://prod-ent-live-gm.jiocinema.com/hls/live/2100328/uhd_akamai_ctv_avc_hin_ipl_s2_m2140424/master.m3u8'
+    };
+    var hls = new Hls();
+    loadStream(sources['720P']); // Default to 720P on load
+
+    qualitySelector.addEventListener('change', function() {
+      loadStream(this.value);
+    });
+
+    liveButton.addEventListener('click', function() {
+      // 'Go Live' simply reloads the highest available quality
+      qualitySelector.value = sources['4K'];
+      loadStream(sources['4K']);
+    });
+
+    function loadStream(src) {
+      if(Hls.isSupported()) {
+        hls.destroy();
+        hls = new Hls();
+        hls.loadSource(src);
+        hls.attachMedia(video);
+      } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+        video.src = src;
+      }
+    }
+  });
+</script>
 </body>
 </html>
