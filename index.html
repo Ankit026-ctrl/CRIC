@@ -4,47 +4,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSK vs PKBS Live Streaming</title>
-<link rel="stylesheet" href="style.css">
-<script>
-
-        function changeQuality(quality) {
-            let videoPlayer = document.getElementById('video-player');
-            if (quality === '240') {
-                videoPlayer.src = "https://prod-ent-live-gm.jiocinema.com/hls/live/2100323/hd_akamai_androidmob_avc_hin_ipl_s1_m1020524/master_240p.m3u8";
-            } else if (quality === '360') {
-                videoPlayer.src = "https://prod-ent-live-gm.jiocinema.com/hls/live/2100323/hd_akamai_androidmob_avc_hin_ipl_s1_m1020524/master_360p.m3u8";
-            } else if (quality === '480') {
-                videoPlayer.src = "https://prod-ent-live-gm.jiocinema.com/hls/live/2100323/hd_akamai_androidmob_avc_hin_ipl_s1_m1020524/master_480p.m3u8";
-            } else if (quality === '720') {
-                videoPlayer.src = "https://prod-ent-live-gm.jiocinema.com/hls/live/2100323/hd_akamai_androidmob_avc_hin_ipl_s1_m1020524/master_720p.m3u8";
-            } else if (quality === '1080') {
-                videoPlayer.src = "https://prod-ent-live-gm.jiocinema.com/hls/live/2100323/hd_akamai_androidmob_avc_hin_ipl_s1_m1020524/master_1080p.m3u8";
-            } else if (quality === '4k') {
-                videoPlayer.src = "https://prod-ent-live-gm.jiocinema.com/hls/live/2100322/uhd_akamai_ctv_avc_hin_ipl_s1_m1020524/master.m3u8";
-            }
-            videoPlayer.play();
-        }
-    
-</script>
+    <title> Live Streaming</title>
     
 </head>
 
 <body>
-    <h1>SRH vs RR Live Streaming</h1>
+    <h1>MI vs KKR Live Streaming</h1>
 
     <video controls autoplay id="video-player">
-        <source src="https://prod-ent-live-gm.jiocinema.com/hls/live/2100323/hd_akamai_androidmob_avc_hin_ipl_s1_m1020524/master_240p.m3u8" type="video/mp4">
+        <source src="https://prod-ent-live-gm.jiocinema.com/hls/live/2100323/hd_akamai_androidmob_avc_hin_ipl_s1_m1030524/master_240p.m3u8" type="video/mp4">
         Your browser does not support the video tag.
     </video>
 
     <div class="options">
-        <button onclick="changeQuality('240')">240P</button>
-        <button onclick="changeQuality('360')">360P</button>
-        <button onclick="changeQuality('480')">480P</button>
-        <button onclick="changeQuality('720')">720P</button>
-        <button onclick="changeQuality('1080')">1080P</button>
-        <button onclick="changeQuality('4k')">4K</button>
+        <select onchange="changeQuality()">
+            <option value="240">240P</option>
+            <option value="360">360P</option>
+            <option value="480">480P</option>
+            <option value="720">720P</option>
+            <option value="1080">1080P</option>
+            <option value="4k">4K</option>
+        </select>
     </div>
 
     <div class="telegram-link">
