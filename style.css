@@ -5,6 +5,10 @@ body {
             text-align: center;
             background-color: yellow;
         }
+body {
+  background-color: lightblue;
+}
+
 
         h1 {
             margin-top: 10px;
