@@ -16,6 +16,7 @@ body {
     video {
       width: 420px;
       height: 450px;
+display:block;
     }
 
     .options {
