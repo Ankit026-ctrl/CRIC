@@ -27,7 +27,7 @@ display:block;
       padding: 10px;
       font-size: 16px;
       cursor: pointer;
-      background-color: pink;
+      background-color: #AA336A;
       color: #fff;
       border: none;
       border-radius: 5px;
@@ -39,7 +39,7 @@ display:block;
 
     .telegram-link a {
       display: inline-block;
-      background-color: pink;
+      background-color: #AA336A;
       color: #fff;
       text-decoration: none;
       padding: 10px 20px;
