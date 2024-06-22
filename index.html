@@ -1,81 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Live Streaming</title>
-<link rel="stylesheet" href="style.css">
-<style>
-body {
-background-color: ;
-}
-</style>
-    <script>
-
-        function changeQuality() {
-            let quality = document.querySelector('select').value;
-            let videoPlayer = document.getElementById('video-player');
-            if (quality === '240') {
-                videoPlayer.src = "https://vkvsd55.mycdn.me/hls/6445528779397.m3u8/sig/0zzEdpdqgrg/expires/1717256896387/srcIp/139.84.172.25/urls/185.226.53.49/clientType/13/srcAg/CHROME/mid/6901063756677/6445528779397_lowest/index.m3u8";
-            } else if (quality === '360') {
-                videoPlayer.src = "https://vkvsd55.mycdn.me/hls/6445528779397.m3u8/sig/0zzEdpdqgrg/expires/1717256896387/srcIp/139.84.172.25/urls/185.226.53.49/clientType/13/srcAg/CHROME/mid/6901063756677/6445528779397_low/index.m3u8";
-            } else if (quality === '480') {
-                videoPlayer.src = "https://vkvsd55.mycdn.me/hls/6445528779397.m3u8/sig/0zzEdpdqgrg/expires/1717256896387/srcIp/139.84.172.25/urls/185.226.53.49/clientType/13/srcAg/CHROME/mid/6901063756677/6445528779397_medium/index.m3u8";
-            } else if (quality === '720') {
-                videoPlayer.src = "https://vkvsd55.mycdn.me/hls/6445528779397.m3u8/sig/0zzEdpdqgrg/expires/1717256896387/srcIp/139.84.172.25/urls/185.226.53.49/clientType/13/srcAg/CHROME/mid/6901063756677/6445528779397_high/index.m3u8";
-            } else if (quality === '1080') {
-                videoPlayer.src = "https://prod-ent-live-gm.jiocinema.com/hls/live/2100323/hd_akamai_androidmob_avc_hin_ipl_s1_m1260524/master_1080p.m3u8";
-            } else if (quality === '4k') {
-                videoPlayer.src = "https://prod-ent-live-gm.jiocinema.com/hls/live/2100322/uhd_akamai_ctv_avc_hin_ipl_s1_m1260524/master.m3u8";
-            }
-            videoPlayer.play();
-        }
-    
-</script>
+    <title>Movistaan</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
+<body class="grey darken-3 white-text">
 
-<body>
-<div>
-    <h1>India vs Bangladesh warmup Live Streaming</h1>
+    <nav class="grey darken-4">
+        <div class="nav-wrapper container">
+            <a href="#" class="brand-logo">Movistaan</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="#" class="category" data-category="trending">Trending</a></li>
+                <li><a href="#" class="category" data-category="bollywood">Bollywood</a></li>
+                <li><a href="#" class="category" data-category="webseries">Webseries</a></li>
+                <li><a href="#" class="category" data-category="south">South Movies</a></li>
+                <li><a href="#" class="category" data-category="hollywood">Hollywood</a></li>
+            </ul>
+        </div>
+    </nav>
 
-<div>
-     <div class="wave"></div>
-     <div class="wave"></div>
-     <div class="wave"></div>
-  </div>
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="#" class="category" data-category="trending">Trending</a></li>
+        <li><a href="#" class="category" data-category="bollywood">Bollywood</a></li>
+        <li><a href="#" class="category" data-category="webseries">Webseries</a></li>
+        <li><a href="#" class="category" data-category="south">South Movies</a></li>
+        <li><a href="#" class="category" data-category="hollywood">Hollywood</a></li>
+    </ul>
 
+    <div class="container">
+        <h1 class="center-align">
+            <span id="typed-text"></span>
+            <span id="cursor">|</span>
+        </h1>
+        
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="search" type="text" class="validate white-text">
+                <label for="search">Search Movies</label>
+            </div>
+        </div>
 
-    <video controls autoplay id="video-player" width="420px" height="240px" >
-        <source src="https://vsd146.mycdn.me/hls/6570902883066.m3u8/sig/CTXN8OkrhiM/expires/1718195832937/srcIp/42.106.177.144/urls/45.136.21.59/clientType/36/srcAg/CHROME_ANDROID/mid/7064301684730/6570902883066_high/index.m3u8?p" type="video/mp4">
-        Your browser does not support the video tag.
-    </video>
-
-    <div class="options">
-        <select onchange="changeQuality()">
-            <option value="240">240P</option>
-            <option value="360">360P</option>
-            <option value="480" default>480P</option>
-            <option value="720">720P</option>
-            
-        </select>
+        <div class="row" id="movies-list">
+            <!-- Movie items will be appended here by JavaScript -->
+        </div>
     </div>
 
-    <div class="telegram-link">
-        <a href="https://t.me/movieswebseries_group" target="_blank">Join us on Telegram</a>
-    </div>
-</div>
+    <footer class="page-footer grey darken-4">
+        <div class="container">
+            <div class="row">
+                <div class="col l6 s12">
+                    <h5 class="white-text">Movistaan</h5>
+                    <p class="grey-text text-lighten-4">Download Movies and Webseries</p>
+                </div>
+                <div class="col l4 offset-l2 s12">
+                    <h5 class="white-text">Links</h5>
+                    <ul>
+                        <li><a class="grey-text text-lighten-3" href="#!">Home</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Categories</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Trending</a></li>
+                        <li><a class="grey-text text-lighten-3" href="#!">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-copyright">
+            <div class="container">
+                © 2024 Movistaan
+            </div>
+        </div>
+    </footer>
 
-
-<script>
-window.addEventListener("load", function() {
-      var result = window.confirm("Join Telegram Group More Movies🎬");
-      if (result) {
-        window.location.href = "https://t.me/movieswebseries_group";
-      }
-    });
-</script>
-
+    <script type="module" src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
-
 </html>
