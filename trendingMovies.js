@@ -1,6 +1,6 @@
 const trendingMovies = [
     {
-        title: "Trending Movie 1",
+        title: "Panchayat",
         description: "Description of Trending Movie 1",
         imgPath: "images/trending1.jpg",
         qualityLinks: {
