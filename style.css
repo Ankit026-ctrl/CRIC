@@ -1,12 +1,31 @@
 /* Add any custom styles here */
 body {
     font-family: Arial, sans-serif;
+    background-color: #424242; /* Darken grey theme */
+    color: #ffffff; /* Default text color */
 }
 
 nav ul a {
     font-size: 1.2em;
+    color: #ffffff;
 }
 
 .movie-card .card-content {
     color: black;
+}
+
+.movie-card .card-action a {
+    background-color: #757575; /* Grey color */
+}
+
+.movie-card .card-action a:hover {
+    background-color: #616161; /* Slightly darker grey */
+}
+
+/* Footer styles */
+footer {
+    background-color: #424242;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
 }
