@@ -116,3 +116,16 @@ document.addEventListener('DOMContentLoaded', function() {
     function type() {
         const currentPhrase = phrases[currentPhraseIndex];
         typedTextElement.textContent = currentPhrase.slice(0, currentLetterIndex + 1);
+        currentLetterIndex++;
+        
+        if (currentLetterIndex === currentPhrase.length) {
+            currentLetterIndex = 0;
+            currentPhraseIndex = (currentPhraseIndex + 1) % phrases.length;
+            setTimeout(type, 2000); // Wait for 2 seconds before typing the next phrase
+        } else {
+            setTimeout(type, 100);
+        }
+    }
+
+    type();
+});
