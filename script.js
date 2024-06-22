@@ -30,9 +30,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="card-image">
                         <img src="${movie.imgPath}" alt="${movie.title}">
                     </div>
-                    <div class="card-content">
-                        <span class="card-title">${movie.title}</span>
-                        <p>${movie.description}</p>
+                    <div class="card-content black-text">
+                        <span class="card-title black-text">${movie.title}</span>
+                        <p class="black-text">${movie.description}</p>
                     </div>
                     <div class="card-action">
                         <a href="${movie.qualityLinks['480p']}" class="waves-effect waves-light btn">
@@ -77,9 +77,9 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="card-image">
                         <img src="${movie.imgPath}" alt="${movie.title}">
                     </div>
-                    <div class="card-content">
-                        <span class="card-title">${movie.title}</span>
-                        <p>${movie.description}</p>
+                    <div class="card-content black-text">
+                        <span class="card-title black-text">${movie.title}</span>
+                        <p class="black-text">${movie.description}</p>
                     </div>
                     <div class="card-action">
                         <a href="${movie.qualityLinks['480p']}" class="waves-effect waves-light btn">
