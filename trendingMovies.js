@@ -3,7 +3,7 @@ const trendingMovies = [
         title: "Kota Factory Season 3", 
         description: "The story is set in Kota, Rajasthan, an educational hub famous for its coaching centres.", 
         qualityLinks: { '480p': 'https://shrinkme.vip/Kotafactory3_480p', '720p': 'https://shrinkme.vip/KotaFactory3-720p', '1080p': 'https://file-to-link.up.railway.app/watch/66745a5efe5c1d9abbe0f093' }, 
-        imgPath: "https://image.tmdb.org/t/p/original/mQEmKXSFlzBlSoYgut0VfjxAzoA.jpg" 
+        imgPath: "https://mallucampaign.in/images/img_1719047931.jpg" 
     },
     { 
         title: "Panchayat 3", 
