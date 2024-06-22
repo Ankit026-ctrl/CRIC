@@ -35,13 +35,13 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p class="black-text">${movie.description}</p>
                     </div>
                     <div class="card-action">
-                        <a href="${movie.qualityLinks['480p']}" class="waves-effect waves-light btn">
+                        <a href="${movie.qualityLinks['480p']}" class="btn grey darken-2">
                             480p
                         </a>
-                        <a href="${movie.qualityLinks['720p']}" class="waves-effect waves-light btn">
+                        <a href="${movie.qualityLinks['720p']}" class="btn grey darken-2">
                             720p
                         </a>
-                        <a href="${movie.qualityLinks['1080p']}" class="waves-effect waves-light btn">
+                        <a href="${movie.qualityLinks['1080p']}" class="btn grey darken-2">
                             1080p
                         </a>
                     </div>
@@ -82,13 +82,13 @@ document.addEventListener('DOMContentLoaded', function() {
                         <p class="black-text">${movie.description}</p>
                     </div>
                     <div class="card-action">
-                        <a href="${movie.qualityLinks['480p']}" class="waves-effect waves-light btn">
+                        <a href="${movie.qualityLinks['480p']}" class="btn grey darken-2">
                             480p
                         </a>
-                        <a href="${movie.qualityLinks['720p']}" class="waves-effect waves-light btn">
+                        <a href="${movie.qualityLinks['720p']}" class="btn grey darken-2">
                             720p
                         </a>
-                        <a href="${movie.qualityLinks['1080p']}" class="waves-effect waves-light btn">
+                        <a href="${movie.qualityLinks['1080p']}" class="btn grey darken-2">
                             1080p
                         </a>
                     </div>
